@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entangle Chat-2</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <!-- Remove QR code library for now to simplify -->
 </head>
 <body>
     <div class="container">
@@ -15,18 +15,18 @@
         </header>
 
         <div class="status-container">
-            <div id="status" class="status">🔄 Initializing...</div>
+            <div id="status" class="status">Loading...</div>
             <div id="output" class="output"></div>
         </div>
 
         <div class="qr-section">
-            <h3>Your Quantum QR Code</h3>
-            <canvas id="qrcvs" hidden></canvas>
-            <p class="hint">Show this QR to entangle with partner</p>
+            <h3>Your Quantum Code</h3>
+            <div id="code-display" style="background: #f5f5f5; padding: 15px; border-radius: 10px; margin: 15px 0; font-family: monospace; word-break: break-all;"></div>
+            <p class="hint">Share this code with your partner</p>
         </div>
 
         <div class="actions">
-            <button id="scan" class="btn primary">📷 Scan QR</button>
+            <button id="scan" class="btn primary">📷 Enter Partner Code</button>
             <button id="regen-seed" class="btn secondary">🔄 New Seed</button>
         </div>
 
@@ -41,9 +41,32 @@
         </footer>
     </div>
 
-    <!-- Mobile Debug Console -->
-    <script src="debug.js"></script>
+    <!-- Use regular script (NOT module) -->
+    <script src="app.js"></script>
     
-    <script type="module" src="app.js"></script>
+    <!-- Simple debug console -->
+    <script>
+        // Simple debug logger
+        window.debugLog = function(message) {
+            console.log('🔧 ' + message);
+            // Also show in page if debug element exists
+            const debugEl = document.getElementById('debug-output');
+            if (debugEl) {
+                debugEl.innerHTML += '<div>' + new Date().toLocaleTimeString() + ': ' + message + '</div>';
+            }
+        };
+        
+        // Global error handler
+        window.addEventListener('error', function(event) {
+            debugLog('ERROR: ' + event.error);
+            const status = document.getElementById('status');
+            if (status) {
+                status.textContent = '❌ Error - Check console';
+                status.style.color = 'red';
+            }
+        });
+        
+        debugLog('HTML loaded successfully');
+    </script>
 </body>
 </html>
