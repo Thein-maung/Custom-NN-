@@ -89,6 +89,12 @@ function setupEventHandlers() {
     if (scanBtn) {
         scanBtn.onclick = handleScan;
     }
+    // Add this line in initializeApp function, after the output text is set
+const codeDisplay = document.getElementById('code-display');
+if (codeDisplay) {
+    const seedB64 = btoa(String.fromCharCode(...currentSeed));
+    codeDisplay.textContent = seedB64;
+}
     
     // Regenerate seed
     const regenBtn = document.getElementById('regen-seed');
@@ -198,3 +204,4 @@ if (document.readyState === 'loading') {
 }
 
 console.log('🔧 App: Script loaded successfully');
+
