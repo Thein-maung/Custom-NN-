@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entangle Chat-2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔗 Entangle Chat-2</h1>
+            <p class="subtitle">Quantum-inspired secure messaging</p>
+        </header>
+
+        <div class="status-container">
+            <div id="status" class="status">🔄 Initializing...</div>
+            <div id="output" class="output"></div>
+        </div>
+
+        <div class="qr-section">
+            <h3>Your Quantum QR Code</h3>
+            <canvas id="qrcvs" hidden></canvas>
+            <p class="hint">Show this QR to entangle with partner</p>
+        </div>
+
+        <div class="actions">
+            <button id="scan" class="btn primary">📷 Scan QR</button>
+            <button id="regen-seed" class="btn secondary">🔄 New Seed</button>
+        </div>
+
+        <div class="navigation">
+            <button id="text-chat" class="btn feature" disabled>💬 Text Chat</button>
+            <button id="voice-chat" class="btn feature" disabled>🎙️ Voice Chat</button>
+        </div>
+
+        <footer>
+            <p class="privacy">🔒 No phone numbers • No server logs • No metadata</p>
+            <p class="license">Quantum AI Network • MIT License</p>
+        </footer>
+    </div>
+
+    <!-- Mobile Debug Console -->
+    <script src="debug.js"></script>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>

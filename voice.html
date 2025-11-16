@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Chat - Entangle Chat-2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Secure Voice Chat</h1>
+            <div class="status-container">
+                <div id="status" class="status">🔄 Loading...</div>
+            </div>
+        </header>
+
+        <div class="voice-container">
+            <div id="call-status" class="call-status">Ready to call</div>
+            
+            <div class="voice-controls">
+                <button id="start-call" class="btn primary">📞 Start Call</button>
+                <button id="join-call" class="btn primary">🔊 Join Call</button>
+                <button id="end-call" class="btn danger" disabled>📞 End Call</button>
+            </div>
+
+            <div class="hint">
+                <p>🔒 Voice encrypted with quantum OTP chunks</p>
+                <p>🤖 AI-generated pads for perfect secrecy</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button onclick="location.href='index.html'" class="btn secondary">← Back to Pairing</button>
+        </div>
+    </div>
+
+    <!-- Mobile Debug Console -->
+    <script src="debug.js"></script>
+    
+    <script type="module" src="voice.js"></script>
+</body>
+</html>
