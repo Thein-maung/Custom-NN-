@@ -46,6 +46,7 @@ h1 {
     border-radius: 10px;
     font-weight: bold;
     margin-bottom: 10px;
+    background: #f8f9fa;
 }
 
 .output {
@@ -56,12 +57,6 @@ h1 {
 .qr-section {
     text-align: center;
     margin: 30px 0;
-}
-
-#qrcvs {
-    border: 2px solid #eee;
-    border-radius: 10px;
-    margin: 15px auto;
 }
 
 .hint {
@@ -99,7 +94,6 @@ h1 {
 
 .btn.primary:hover:not(:disabled) {
     background: #5a6fd8;
-    transform: translateY(-2px);
 }
 
 .btn.secondary {
@@ -122,114 +116,6 @@ h1 {
 .btn.feature:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.btn.danger {
-    background: #e74c3c;
-    color: white;
-}
-
-.btn.danger:hover:not(:disabled) {
-    background: #c0392b;
-}
-
-/* Chat Styles */
-.chat-container {
-    margin: 20px 0;
-}
-
-.messages {
-    height: 300px;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    padding: 15px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-    background: #f8f9fa;
-}
-
-.message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-.message.sent {
-    background: #667eea;
-    color: white;
-    margin-left: 20px;
-}
-
-.message.received {
-    background: #e9ecef;
-    color: #333;
-    margin-right: 20px;
-}
-
-.message.encrypted {
-    background: #ffeaa7;
-    color: #333;
-    font-family: monospace;
-    font-size: 12px;
-}
-
-.message.system {
-    background: #dfe6e9;
-    color: #636e72;
-    text-align: center;
-    font-style: italic;
-}
-
-.message.error {
-    background: #fab1a0;
-    color: #d63031;
-}
-
-.input-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.input-group {
-    display: flex;
-    gap: 10px;
-}
-
-#msg-input {
-    flex: 1;
-    padding: 15px;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
-#msg-input:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-/* Voice Chat Styles */
-.voice-container {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.call-status {
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-.voice-controls {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
 }
 
 footer {
